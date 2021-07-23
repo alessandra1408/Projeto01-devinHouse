@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projeto01.css">
+    <script defer src="../Projeto01/projeto01.js"></script>
+    <title>To Do List</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Lista de Afazeres</h1>
+    <br>
+
+    <form id="form">
+        <label for="inputTxt">Item a adicionar: </label>
+        <input autocomplete="off" type="text" name="" id="inputTxt" placeholder="Item de Mercado">
+        <button type="submit" id="btnAdd">Adicionar</button>
+    </form>
+    <br>
+    <div id="divItens">
+        <select size="10" id="lista">
+            <option class="optNormal" id="optDefault">Itens da Lista</option>
+            <!-- <option id="btnInicial" ></option> -->
+        </select>
+        <div id="divBotoes" onclick="efeitosBotoes();" class="btn-group" role="group">
+
+        </div>
+    </div>
+    <button id="btnExclui">Excluir</button>
+
+</body>
+
+</html>

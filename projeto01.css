@@ -1,0 +1,62 @@
+
+#btnAdd {
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+body {
+    text-align: center;
+}
+
+select {
+    width: 350px;
+}
+
+#inputTxt {
+    width: 180px;
+    height: 25px;
+    display: inline-block;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+#divBotoes {
+    display: flex;
+    position: vertical;
+    width: 200px;
+}
+
+#divBotoes button {
+    width: min-content;
+    height: min-content;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+#lista {
+    border: none;
+    margin: 0px;
+    width: 325px;
+    margin: -13px;
+}
+
+#lista option {
+    width: min-content;
+    
+}
+
+.optNormal {
+    color: black;
+}
+
+.optRiscado {
+    text-decoration: line-through;
+}
+
+#divItens {
+    display: flex;
+    justify-content: center;
+
+}
+
