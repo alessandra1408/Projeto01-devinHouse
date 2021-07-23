@@ -22,16 +22,20 @@ select {
     border-radius: 3px;
 }
 #divBotoes {
-    display: flex;
-    position: vertical;
-    width: 200px;
+    width: 70px;
 }
 
 #divBotoes button {
+    background-color: white;
+    border: none;
+    display: inline-flex;
+    flex-direction: column;
     width: min-content;
     height: min-content;
-    margin-top: -5px;
-    margin-bottom: 10px;
+}
+
+#divBotoes button:hover{
+    transform: scale(1.4);
 }
 
 #lista {

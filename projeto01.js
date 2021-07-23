@@ -70,9 +70,6 @@ function criarBotoes() {
     novoBtnFeito.value = "✅";
     novoItem.setAttribute("id", "btnFeito")
     novoItem.classList.add("optNormal");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
     divBotoes.appendChild(novoBtnFeito);
 
     novoBtnExcluir = document.createElement("button");
@@ -94,7 +91,7 @@ function mostraLista() {
     }
 }
 
-function efeitosBotoes() {
+function efeitosBotoes(botao) {
         novoItem.classList.remove("optNormal");
         novoItem.classList.add("optRiscado");
     }
