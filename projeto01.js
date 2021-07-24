@@ -45,15 +45,13 @@ function salvarLista(txtItem) {
 
         localStorage.setItem("lista", JSON.stringify(itensDaLista))
 
-        return li;
+        return divBtnLi;
     }
     else {
         alert("Favor inserir um item")
     }
     console.log(txtItem);
 }
-
-
 
 function botaoFeito() {
 

@@ -50,13 +50,10 @@ select {
     padding: 3px;
 }
 
-.optNormal {
+.itemNormal {
     color: black;
 }
 
-.optRiscado {
+.itemRiscado {
     text-decoration: line-through;
 }
-
-
-
