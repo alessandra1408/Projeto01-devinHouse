@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Projeto01-devinHouse/projeto01.css">
-    <script defer src="../../GitHub/Projeto01-devinHouse/projeto01.js"></script>
+    <script defer src="../Projeto01-devinHouse/projeto01.js"></script>
     <title>To Do List</title>
 </head>
 
 <body>
+    <div id="conteudo">
 
-    <h1 id="titulo">Lista de Afazeres</h1>
-    <br>
+        <h1 id="titulo">Lista de Afazeres</h1>
+        <br>
 
-    <form id="form">
-        <label for="inputTxt">Item a adicionar: </label>
-        <input autocomplete="off" type="text" name="" id="inputTxt" placeholder="Item de Mercado">
-        <button type="submit" id="btnAdd">Adicionar</button>
-    </form>
-    <br>
-    <div id="divItens">
-        <select size="10" id="lista">
-            <option class="optNormal" id="optDefault">Itens da Lista</option>
-            <!-- <option id="btnInicial" ></option> -->
-        </select>
-        <div id="divBotoes" onclick="efeitosBotoes();" class="btn-group" role="group">
+        <form id="form">
+            <label for="inputTxt">Item a adicionar: </label>
+            <input autocomplete="off" type="text" name="" id="inputTxt" placeholder="Item de Mercado">
+            <button type="submit" id="btnAdd">Adicionar</button>
+        </form>
+        
+        <section>
+            <ul size="10" id="lista">
+            </ul>
+        </section>
 
-        </div>
     </div>
-    <button id="btnExclui">Excluir</button>
 
+    <button id="btnExclui">Excluir</button>
 </body>
 
 </html>
