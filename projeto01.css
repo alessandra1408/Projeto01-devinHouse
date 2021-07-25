@@ -17,6 +17,7 @@ body {
     width: 300px;
     height: min-content;
     padding: 7px 0px;
+    text-transform: capitalize;
     /* text-align: justify; */
 }
 
@@ -37,6 +38,10 @@ body {
     padding: 30px 40px;
 }
 
+.risca {
+    text-decoration: line-through;
+}
+
 #divForm {
     background-color: #ffffff;
     position: relative;
@@ -54,6 +59,7 @@ body {
     margin: 0px;
     position: relative;
     font-size: 14pt;
+    text-transform: capitalize;
 }
 
 #divForm button {
