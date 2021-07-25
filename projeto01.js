@@ -1,8 +1,8 @@
-var btnAdd = document.querySelector("#btnAdd")
+var form = document.querySelector("#form")
 var inputItem = document.querySelector("#inputItem")
 var alerta = document.querySelector("#alerta")
 
-btnAdd.addEventListener("click", function (event) {
+form.addEventListener("submit", function (event) {
     event.preventDefault();
     adicionaItem(inputItem.value);
 })
