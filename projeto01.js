@@ -1,96 +1,28 @@
+var btnAdd = document.querySelector("#btnAdd")
+var inputItem = document.querySelector("#inputItem")
+var alerta = document.querySelector("#alerta")
 
-var form = document.querySelector("#form");
-var inputItem = document.getElementById("inputTxt");
-var lista = document.querySelector("#lista");
-var btnExclui = document.getElementById("btnExclui");
-var divBotoes = document.querySelector("#divBotoes");
-var divBtnLi;
-var novoBtnFeito;
-var li;
-var novoBtnExcluir;
-var itensDaLista = [];
-
-btnExclui.addEventListener("click", function (event) {
-    excluiLista();
-});
-
-form.addEventListener("submit", function (event) {
+btnAdd.addEventListener("click", function (event) {
     event.preventDefault();
-    salvarLista(inputItem.value);
-});
+    adicionaItem(inputItem.value);
+})
 
-mostraLista();
-
-function salvarLista(txtItem) {
+function adicionaItem(txtItem) {
     if (txtItem) {
-
-        divBtnLi = document.createElement("div");
-        divBtnLi.classList.add("divBtnLi");
-        divBtnLi.innerHTML = `
-        <input type="checkbox" >
-        <li>${txtItem}</li>
-        <input type="button" value="X">
+        document.querySelector("#divItens").innerHTML += `
+        <div class="itens">
+            <input type="checkbox" class="riscar">
+            <span id="span">
+            ${txtItem}
+            </span>
+            <input type="button" class="deletar" value="X">
+        </div>
         `
-        lista.appendChild(divBtnLi);
-
-        /* li = document.createElement("li");
-        li.appendChild(document.createTextNode(txtItem));
-        lista.appendChild(li);
-        divBtnLi.appendChild(botaoFeito());
-        divBtnLi.appendChild(botaoExclui()); */
-
-        itensDaLista.push(txtItem);
+        inputItem.innerHTML = "";
         inputItem.value = "";
         inputItem.focus();
-
-        localStorage.setItem("lista", JSON.stringify(itensDaLista))
-
-        return li;
     }
     else {
-        alert("Favor inserir um item")
+        alerta.innerHTML = "Por favor, insira uma valor"
     }
-    console.log(txtItem);
-}
-
-
-
-function botaoFeito() {
-
-    novoBtnFeito = document.createElement("button");
-    novoBtnFeito.innerHTML = "✅";
-    novoBtnFeito.value = "✅";
-    /* li.setAttribute("id", "btnFeito")
-    li.classList.add("optNormal"); */
-
-    return novoBtnFeito;
-}
-
-function botaoExclui() {
-
-    novoBtnExcluir = document.createElement("button");
-    novoBtnExcluir.innerHTML = "❌";
-    novoBtnExcluir.value = "❌";
-
-    return novoBtnExcluir;
-}
-
-function mostraLista() {
-    var listaLocalStorage = JSON.parse(localStorage.getItem("lista"));
-    console.log(listaLocalStorage);
-    console.log(typeof listaLocalStorage)
-    if (listaLocalStorage) {
-        for (var i = 0; i < listaLocalStorage.length; i++) {
-            salvarLista(listaLocalStorage[i]);
-        }
-    }
-}
-
-function efeitosBotoes(botao) {
-        li.classList.remove("optNormal");
-        li.classList.add("optRiscado");
-}
-
-function excluiLista() {
-    localStorage.removeItem(divBtnLi);
 }
