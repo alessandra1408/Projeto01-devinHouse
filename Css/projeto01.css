@@ -1,0 +1,92 @@
+
+body {
+    height: 100vw;
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #2bee39 0%, #03caf2f7 100%); 
+}
+
+.itens {
+    display: flex;
+    justify-content: space-between;
+    max-height: min-content;
+    align-items: center;
+}
+
+.itens span {
+    width: 300px;
+    height: min-content;
+    padding: 7px 0px;
+    font-size: 14pt;
+    text-transform: capitalize;
+    /* text-align: justify; */
+}
+
+.itens input {
+    margin: 0px;
+    width: min-content;
+    height: min-content;
+    cursor: pointer;
+}
+
+.conteudo {
+    border: 2px solid white;
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px;
+}
+
+.risca {
+    text-decoration: line-through;
+}
+
+#divForm {
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px 20px;
+    border-radius: 5px;
+}
+
+#divForm input {
+    width: 70%;
+    height: 45px;
+    border: 2px solid #d1d3d4;
+    padding: 5px;
+    color: black;
+    margin: 0px;
+    position: relative;
+    font-size: 14pt;
+    text-transform: capitalize;
+}
+
+#divForm button {
+    position: relative;
+    width: 20%;
+    height: 45px;
+    float: right;
+    cursor: pointer;
+    font-size: 12pt;
+    border: none;
+    margin-top: 6px;
+    border-radius: 5px;
+    transition: background-color 1s;
+}
+
+#divForm button:hover {
+    background-color: #1a9a22;
+    color: white;
+}
+
+#divItens {
+    background-color: white;
+    position: relative;
+    padding: 20px 40px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
