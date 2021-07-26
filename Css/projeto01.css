@@ -1,4 +1,11 @@
 
+/* 
+                           === IGNORE ===
+passei uma vida tentando usar li e px como tamanho, mas no final
+vi que foi muuuuito mais facil usar span e %. Me senti uma palhaça ksks. 
+                           === xxxxxx ===
+*/
+
 body {
     height: 100vw;
     text-align: center;
@@ -40,7 +47,7 @@ body {
     padding: 30px 40px;
 }
 
-.risca {
+.riscar {
     text-decoration: line-through;
 }
 
@@ -74,7 +81,7 @@ body {
     border: none;
     margin-top: 6px;
     border-radius: 5px;
-    transition: background-color 1s;
+    transition: background-color 0.4s ease;
 }
 
 #divForm button:hover {
@@ -89,4 +96,16 @@ body {
     margin-top: 60px;
     border-radius: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+#btnExcluirLista {
+    position: relative;
+    width: 100px;
+    height: 43px;
+    cursor: pointer;
+    font-size: 12pt;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease;
 }

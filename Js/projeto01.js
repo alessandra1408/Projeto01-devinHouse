@@ -1,15 +1,19 @@
 var form = document.querySelector("#form")
 var inputItem = document.querySelector("#inputItem")
-var checkbox = document.querySelector("#checkbox");
 var itemRiscado = document.querySelectorAll(".normal");
+var btnExcluirLista = document.getElementById("btnExcluirLista");
 
 var listaItens = [];
-
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
     adicionaItem(inputItem.value);
     armazenarNoLocal();
+})
+
+btnExcluirLista.addEventListener("click", function (event) {
+    excluirLista()
+    window.location.reload()
 })
 
 exibeLista();
@@ -27,7 +31,6 @@ function adicionaItem(txtItem) {
         </div>
         `
         var itemExcluido = document.querySelectorAll(".deleta");
-        var itemSpan = document.querySelector(".span");
 
         for (var i = 0; i < itemExcluido.length; i++) {
             itemExcluido[i].onclick = function () {
@@ -37,6 +40,9 @@ function adicionaItem(txtItem) {
                 }
             }
         };
+
+        /* nao consegui excluir o item span do localStorage :v
+        só consegui tirar tudo. Remover um item não deu certo. */
 
         listaItens.push(txtItem);
 
@@ -69,9 +75,6 @@ function checar(event) {
     target.nextElementSibling.classList.toggle('riscar')
 }
 
-/* function riscaItem() {
-    
-    for (var i = 0; i < itemSpan.length; i++) {
-    }
+function excluirLista() {
+    localStorage.clear();
 }
- */
